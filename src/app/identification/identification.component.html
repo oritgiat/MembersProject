@@ -1,0 +1,94 @@
+<!-- <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
+ <h1 class="user">כניסה</h1>
+<div class="well " > 
+  <form   #form="ngForm">
+    <div class="p-field">
+      <!-- <label class="b" for="email">כתובת מייל:</label> -->
+      <input  class="ff" style="height: 50px"   [(ngModel)]="personModule.email" id="firstname1" type="email" name="email" [ngClass]="{f:unuser}" pInputText placeholder="  כתובת מייל "> 
+      <!-- <p *ngIf="unuser" id="username-help" class="p-error"   >כתובת שגויה</p> -->
+
+  </div>
+  
+   <br>
+   
+<div class="sis">
+      <input  class="ff" style="height: 50px" [(ngModel)]="personModule.password"   type="password"   name="pwd" [ngClass]="{f:unuser}" pInputText placeholder="  הכנס סיסמא  " > 
+      <br>
+      <p class="shaguy"*ngIf="unuser" id="username-help" class="p-error"  ><span class="glyphicon glyphicon-asterisk"></span> סיסמא או כתובת מייל  שגויים</p>
+
+    </div>
+    
+    <br>
+    <button  (click)="send()" class="btn" class="btn btn-block">שלח</button>
+    <br><br>
+    <button  (click)="sendToregist()"  class="btnn btn-block">להרשמה</button>
+    <br> <br>
+<a class="pass" href="localhost4200">שכחת סיסמא?</a>
+  </form> 
+  <!-- <button class="button"   (click)="showDialog()">עדיין לא רשום</button> -->
+
+
+<p-dialog   position="top" [(visible)]="display">
+  <form >
+    <div class="form-group">
+        <label for="usr">שם פרטי </label>
+        <input class="f" style="height: 50px" type="text" id="usr" name="name" [(ngModel)]="personModule.name"  pInputText placeholder="הכנס שם פרטי">
+    </div>
+    <div class="form-group">
+        <label for="number">תעודת זהות</label>
+        <input  class="f" style="height: 50px" type="text" id="number" name="id" [(ngModel)]="personModule.person_id" pInputText placeholder="הכנס  תעודת זהות">
+    </div>
+    <div class="form-group">
+      <label for="email">כתובת מייל</label>
+      <input class="f" style="height: 50px"type="email" class="form-control"  id="email" name="email" [(ngModel)]="personModule.email">
+    </div>
+    <div class="form-group">
+      <label for="pwd">סיסמא</label>
+      <input class="f" style="height: 50px" type="password"  id="pwd" name="password" [(ngModel)]="personModule.password" placeholder="Enter password">
+    </div>
+    <button type="submit" class="button2 "  (click)="add()" [routerLink]=" ['/first-nav/Home']">שלח</button>
+  
+  </form> 
+  
+  </p-dialog>
+</div>
+
+
+<!-- <a (click)="open()"  >עדיין לא רשום</a>
+  
+  <div id="addModal" class="w3-modal modal" dir="auto">
+    <div class="w3-modal-content w3-animate-top w3-card-4" >
+      <header class="w3-container w3-teal w3-center w3-padding-32 " > 
+      <span  class="w3-button w3-teal w3-xlarge w3-display-topright"   onclick="document.getElementById('addModal').style.display='none'">×</span> 
+        <h2 class="w3-wide"><i class=" w3-margin-right"></i>לקוח חדש? הרשם!</h2>
+      </header>
+      <div class="w3-container">
+        <p><label>שם משתמש<i ></i>   <input [(ngModel)]="Customer.curentUser.name" value="   " type="name" class="form-control" style="width:min-content"ngn name="name"  > </label></p>
+        <p><label>סיסמא<i ></i>   <input [(ngModel)]="Customer.curentUser.password" value="   " type="password" class="form-control" style="width:min-content"ngn name="name"  > </label></p>
+        <p><label>ת.ז<i ></i> <input [(ngModel)]="Customer.curentUser.id"  value="   " type="name" class="form-control" style="width:min-content"ngn name="name"  > </label></p>
+        <p><label>כתובת<i ></i>  <input [(ngModel)]="Customer.curentUser.address" value="   " type="name" class="form-control" style="width:min-content"ngn name="name"  ></label></p>
+        <p><label>מייל<i ></i>  <input [(ngModel)]="Customer.curentUser.mail" value="   " type="mail" class="form-control" style="width:min-content"ngn name="name"  ></label></p>
+        <button  (click)="addCustomer()" >הרשם</button> 
+    </div> 
+  </div>  -->
+  <div *ngIf="baruchaba"  class="alert">
+		<strong>  ברוך הבא ל+ {{personModule.name}}  </strong> 
+		<span class="glyphicon glyphicon-ok"></span> 
+		<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+	 </div>
+   <div *ngIf="nirshamta"  class="alert">
+		<strong>  נרשמת בהצלחה </strong> 
+		<span class="glyphicon glyphicon-ok"></span> 
+		<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+	 </div>
+   <div *ngIf="rashum"  class="alert">
+		<strong>  אתה רשום כבר!  </strong> 
+		<span class="glyphicon glyphicon-alert"></span> 
+		<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+	 </div>
+
+
+
+

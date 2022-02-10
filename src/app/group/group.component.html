@@ -1,0 +1,238 @@
+
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
+  
+<div *ngIf="isJoin!=2 || (isJoin==2 && personService.isShowGroup)">
+<p-sidebar [(visible)]="display" position="right" [style]="{width:'22em',height:'100em'}">
+	<br><br><br>
+	<div  class="btn-group-vertical">
+	<p  class="numberOfMember">מספר החברים בקבוצה זו  {{countMember}}</p>
+	<br><br>
+	
+	<button   *ngIf="!hostPerson && !personService.iden" class="btn   btn-lg" (click)="meeting()">
+		ללוח הפגישות
+	
+	</button>
+	<br *ngIf="!hostPerson && !personService.iden">
+    <!-- <button  *ngIf="!status" class="btn   btn-lg" (click)="showMessegeToManager()">הודעות שנשלחו למנהל</button>
+	<br  *ngIf="!status"> -->
+
+<!-- <button *ngIf="personService.iden " class="btn btn-default  btn-lg" (click)="addMember()">אני רוצה להצטרף</button>
+<br *ngIf="personService.iden "> -->
+
+
+<button *ngIf="hostPerson||statusMember" class="btn btn-default  btn-lg" (click)="addMember()">אני רוצה להצטרף</button>
+<br *ngIf="hostPerson||statusMember">
+<button *ngIf="!hostPerson && !personService.iden"  class="btn btn-default  btn-lg" (click)="showDialog3()">שלח הודעה לכולם</button>
+<br *ngIf="!hostPerson && !personService.iden" >
+<button *ngIf="status&&!hostPerson" class="btn btn-default btn-lg" (click)="showDialog2()"  >שלח הודעה למנהל</button>
+<br *ngIf="status&&!hostPerson">
+<!-- <br *ngIf="personService.statusMember"> -->
+
+<!-- <button  *ngIf="hostPerson" class="btn btn-default btn-lg" type="button"  (click)="enter()">לכניסה
+</button>
+<br *ngIf="hostPerson">
+<button  *ngIf="hostPerson" class="btn btn-default btn-lg" type="button"  (click)="regist()">להרשמה
+</button>
+<br *ngIf="hostPerson"> -->
+        <!-- <li *ngIf="personService.managerAproval" ><a  [routerLink]="['first-nav/aprovals']">מחכים לאישור</a></li> -->
+		<button  *ngIf="!status" class="btn btn-default btn-lg" type="button"  (click)="aprovalses()">מחכים לאישור</button>
+		<br  *ngIf="!status" >
+		<button  *ngIf="!hostPerson && !personService.iden " class="btn btn-default btn-lg"   (click)="yeziaa()">ליציאה מהקבוצה  </button>
+
+		<br *ngIf="!hostPerson && !personService.iden ">
+<button   class="btn btn-default btn-lg" type="button"  data-toggle="dropdown"(click)="showMemberGroup()">הצג את חברי הקבוצה
+	<span   class="caret"></span>          
+</button>
+
+	<ul  *ngFor="let item of arrMemberGroup"  >
+	  <li *ngIf="degelP" class="font" >{{item.name}}   
+	 
+ </li>
+	
+</ul>
+
+<!-- <div *ngIf="degelEmail" class="font">{{item.email}}</div> -->
+</div>
+</p-sidebar>
+<div>
+	<div class="dropdown">
+  <!-- <span>Mouse over me</span> -->
+  <i   class="pi pi-bars"  style="font-size: 3rem" (click)="icon_display()"  ></i>
+
+  <div class="dropdown-content">
+  <p class="b6" >תפריט ראשי</p>
+  </div>
+</div>
+
+</div>
+</div>
+<img *ngIf=" personService.curentUser.name" src="http://localhost:52491/img/111.jpg" alt="Avatar" class="avatar" >
+
+<a class="b4" > {{personService.curentUser.name}}    </a>
+<a class="b5">{{personService.status}}</a>
+<p-dialog   type="pInputTextarea"  position="top" [(visible)]="display2">
+	
+	<textarea  style="font-size:200%" class="massege" [rows]="7" [cols]="36" pInputTextarea autoResize="autoResize" [(ngModel)]="corr" ></textarea>
+	<br>
+	<button *ngIf="!degelMassegeMnager" (click)="sendToManager() "position="text-center" class="btn btn-primary">שלח</button>
+
+</p-dialog>
+
+<p-dialog   type="pInputTextarea"  position="top" [(visible)]="display3">
+	<textarea  style="font-size:180%" class="massege" [rows]="7" [cols]="36" pInputTextarea autoResize="autoResize" [(ngModel)]="corre" ></textarea>
+	<br>
+	<button *ngIf="!degelMassege" (click)="sendToEveryone() "position="text-center" class="btn btn-primary">שלח</button>
+
+</p-dialog>
+
+<div *ngIf="isJoin==2 && !personService.isShowGroup">	
+	<h1 class="b">
+		ההצטרפות סגורה...:(
+	</h1>
+</div>
+
+
+
+	 <div *ngIf="isJoin!=2 || (isJoin==2 && personService.isShowGroup)">
+<br><br><br><br><br><br><br>
+<p class="b">
+ {{currentGroup.group_description}}
+</p> 
+<div class="container">
+	<img  class="image" src="http://localhost:52491/img/{{currentGroup.image}}" style="width:100%;" >
+
+	<div class="content">
+	  <h1 class="content2">{{JoinStatus}}</h1>
+	  <h1  class="content3">שם מנהל: {{currentGroup.nameManager }}</h1>
+	  <h2 *ngIf="hostPerson||statusMember"> {{currentGroup.details}}</h2>
+
+	</div>
+  </div>
+
+  <div *ngIf="reg"  class="alert ">
+	<span class="glyphicon glyphicon-alert"></span> 
+
+   <strong>  אתה רשום כבר!    </strong> 
+	<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+ </div>
+
+ <div *ngIf="hiz"  class="alert ">
+	<span class="glyphicon glyphicon-ok">  </span> 
+
+   <strong>  נשלחה בקשת הצטרפות למנהל הקבוצה    </strong> 
+	<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+ </div>
+
+  <div *ngIf="hishtana"  class="alert">
+    <strong>  סטטוס השתנה!    </strong> 
+	<span class="glyphicon glyphicon-ok"></span> 
+	<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+ </div>
+  <div *ngIf="odaa"  class="alert ">
+    <strong>  הודעה נשלחה בהצלחה!    </strong> 
+	<span class="glyphicon glyphicon-ok"></span> 
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  </div>
+  <div *ngIf="odaaMenahel"  class="alert ">
+    <strong>  הודעה נשלחה למנהל !    </strong> 
+	<span class="glyphicon glyphicon-ok"></span> 
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  </div>
+  <div *ngIf="nirshmta"  class="alert ">
+    <strong>    נרשמת בהצלחה !    </strong> 
+	<span class="glyphicon glyphicon-ok"></span> 
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  </div>
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+
+<div class='w3-sidebar w3-collapse' id='sidenav'>
+	
+<!-- <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar"> -->
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+		<i class="fa fa-remove"></i>
+    </a>
+</div>
+
+</div>
+    
+<!-- <p-toolbar  *ngIf="!hostPerson && !personService.iden " > -->
+	
+		<div class=r2>
+	<button   class="r" *ngIf="!hostPerson && !personService.iden " type="button" class="btn btn-default btn-lg" (click)="sortOld()">
+		<span class="glyphicon glyphicon-sort-by-attributes" ></span> מין בסדר עולה
+	  </button>
+
+	  <button  *ngIf="!hostPerson && !personService.iden " type="button" class="btn btn-default btn-lg" (click)="sortNew()">
+		<span class="glyphicon glyphicon-sort-by-attributes-alt" ></span> מין בסדר יורד 
+	  </button>
+	  <!-- <button  *ngIf="!hostPerson && !personService.iden " type="button" class="btn btn-default btn-lg">
+		<span class="glyphicon glyphicon-sort" ></span> מין  לפי שם <span   class="caret"></span>
+	  </button> -->
+	  <select   *ngIf="!hostPerson && !personService.iden" class="btn btn-default btn-lg" id="user" name="sortByName" [(ngModel)]="person"  (change)="sortByName($event)" >
+		<option value="0" ><span class="glyphicon glyphicon-sort-by-attributes" > מיין לפי שם</span></option>
+		<option  *ngFor="let item of arrMemberGroup2" value="{{item.person_id}}" >   {{item.name}}</option>
+	  </select>
+	  <button  *ngIf="!hostPerson && !personService.iden " type="button" class="btn btn-default btn-lg" (click)="showMessege()">
+		<span class="glyphicon glyphicon-comment" ></span>   כל ההודעות 
+	  </button>
+	  <button *ngIf="!status" type="button" class="btn btn-default btn-lg" (click)="showMessegeToManager()">
+		   הודעות שנשלחו למנהל
+	  </button>
+        <!-- <button  class="nav2" *ngIf="!status" class="btn btn-default btn-lg" type="button"  data-toggle="dropdown"(click)="ShowChangeStatus()"  >שנה סטטוס קבוצה
+			<span   class="caret"></span>          
+		</button> -->
+		<select class="btn btn-default btn-lg" *ngIf="!status" [(ngModel)]="changeStatus"  (change)="ChangeStatus($event)">
+			<option value="0" disabled>שנה סטטוס קבוצה</option>
+			<option value="1">ההצטרפות פתוחה</option>
+			<option value="2">ההצטרפות סגורה</option>
+			<option value="3">נתון לאישור המנהל</option>
+		  </select>
+			
+			</div>		
+
+		
+
+
+<div *ngFor="let item of arrMeeting">
+<label *ngIf="degelM">{{item.date}}</label>
+</div>
+
+<!-- <i  *ngIf="!hostPerson && !personService.iden " class="pi  pi-sort-down"  style="font-size: 3rem" (click)="sortOld()"  ></i>
+<i   *ngIf="!hostPerson && !personService.iden" class="pi  pi-sort-up"  style="font-size: 3rem " (click)="sortNew()"  ></i> -->
+
+  <div *ngIf="!hostPerson && !personService.iden " >
+	<table  class="table table-striped  table-hover " >
+		
+	 <!-- class="p-text-nowrap p-text-truncate" -->
+	 <!-- class="r"   -->
+
+		<tbody >
+
+		  <tr  class="r"  *ngFor="let item of arrCorrespodence" >
+			<td  *ngIf="iconMessege" ><span  class="glyphicon glyphicon-menu-left"  (click)="showJustM(item)"></span></td>
+			<td  *ngIf="iconAllMessege" ><span class="glyphicon glyphicon-menu-down" (click)="showAllM(item)"></span></td>
+
+			<td><span class="glyphicon glyphicon-user" ></span></td>
+
+			<td   class="text-right">{{ item.name}}</td>
+			<td  class="tdTable" >{{item.contents}}</td>
+			
+			<td class ="date" class="text-left">{{item.date | date:"hh:mm:ss "     }}</td>
+			<td class ="date" class="text-left">{{item.date | date:"dd/MM/yy "     }}</td>
+
+			
+		  </tr> 
+		  
+		</tbody>
+	  </table>
+	</div>
+	
+	
+
+
+
+	
+	

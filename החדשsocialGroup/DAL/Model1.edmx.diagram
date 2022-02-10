@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e082da6cfd8b4d028ea42e44384f9c23" Name="Diagram1">
+        <EntityTypeShape EntityType="groupDBModel.correspodence_tbl" Width="1.5" PointX="5.25" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="groupDBModel.group_tbl" Width="1.5" PointX="3" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="groupDBModel.meeting_tbl" Width="1.5" PointX="8.25" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="groupDBModel.member_group_tbl" Width="1.5" PointX="5.25" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="groupDBModel.participation_tbl" Width="1.5" PointX="10.5" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="groupDBModel.person_tbl" Width="1.5" PointX="0.75" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="groupDBModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="groupDBModel.FK_correspodence_tbl_group_tbl" ManuallyRouted="false" />
+        <AssociationConnector Association="groupDBModel.FK_correspodence_tbl_person_tbl" ManuallyRouted="false" />
+        <AssociationConnector Association="groupDBModel.FK_group_tbl_person_tbl" ManuallyRouted="false" />
+        <AssociationConnector Association="groupDBModel.FK_meeting_tbl_group_tbl1" ManuallyRouted="false" />
+        <AssociationConnector Association="groupDBModel.FK_member_group_tbl_group_tbl" ManuallyRouted="false" />
+        <AssociationConnector Association="groupDBModel.FK_meeting_tbl_person_tbl" ManuallyRouted="false" />
+        <AssociationConnector Association="groupDBModel.FK_participation_tbl_meeting_tbl" ManuallyRouted="false" />
+        <AssociationConnector Association="groupDBModel.FK_member_group_tbl_person_tbl1" ManuallyRouted="false" />
+        <AssociationConnector Association="groupDBModel.FK_participation_tbl_person_tbl" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

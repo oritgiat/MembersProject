@@ -1,0 +1,24 @@
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\DAL\bin\Debug\DAL.dll.config
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\DAL\bin\Debug\DAL.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\DAL\bin\Debug\DAL.pdb
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\DAL\bin\Debug\EntityFramework.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\DAL\bin\Debug\EntityFramework.xml
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\DAL\obj\Debug\DAL.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\DAL\obj\Debug\DAL.pdb
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\DAL\bin\Debug\DAL.dll.config
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\DAL\bin\Debug\DAL.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\DAL\bin\Debug\DAL.pdb
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\DAL\bin\Debug\EntityFramework.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\DAL\bin\Debug\EntityFramework.xml
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\DAL\obj\Debug\DAL.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\DAL\obj\Debug\DAL.pdb
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\DAL\obj\Debug\DAL.csprojAssemblyReference.cache

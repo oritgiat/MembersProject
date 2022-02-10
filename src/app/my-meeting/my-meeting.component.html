@@ -1,0 +1,253 @@
+
+ <!-- <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">  -->
+	
+	<!-- <p-messages  class="alert" [(value)]="msgs"></p-messages>
+	<p-messages  [(value)]="msgs"></p-messages>
+	<button type="button" (click)="show()">Show</button> -->
+	<img *ngIf=" personService.curentUser.name" src="http://localhost:52491/img/111.jpg" alt="Avatar" class="avatar" >
+
+	<a class="b4" > {{personService.curentUser.name}}    </a>
+	<a class="b5">{{personService.status}}</a>
+	  <div  *ngIf="MesMeeting" class="alert alert-success">
+		<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+
+		<strong>נוספה פגישה חדשה!</strong>  
+	  </div>
+	  <div  *ngIf="mesDel" class="alert alert-success">
+		<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+
+		<strong>  הפגישה נמחקה!</strong>  
+	  </div>
+	  
+	<button class="button"   (click)="showDialog()">הוספת פגישה</button> 
+
+	<p-dialog   position="top" [(visible)]="display">
+		<form >
+		  <div class="form-group">
+			<label class="b8" for="start">בחר תאריך</label>
+			<!-- <p-calendar formControlName="date"></p-calendar>
+			<p-calendar [(ngModel)]="DateNeeting" [inline]="true"></p-calendar> -->
+			<input class="f1" style="height: 50px" type="date"  name="trip-start"  type="date" id="myDate" 
+				   value="2021-03-04"
+				   [(ngModel)]="DateNeeting">
+			  
+		  </div>
+		  <div class="form-group">
+			<label class="b8" for="appt"> בחר שעה</label>
+
+			<input  class="f1" style="height: 50px" type="time"  id="appt" name="appt"
+				   min="17:00" max="22:00"  required  [(ngModel)]="myTime">
+		  </div>
+		  <div class="form-group">
+			<label class="b8" for="start">בחר מקום</label>
+			<input  class="f1"  style="height: 50px ;"  type="text"  ngn name="messege"  [(ngModel)]="place" >
+		  </div>
+		  <div class="form-group">
+			<label class="b8" for="start"> מטרת הפגישה</label>
+	   <input  class="f1"  style="height: 50px"type="text"  ngn name="messege" [(ngModel)]="purpouse">
+		  </div>
+		  <button class="button2 " (click)="add()"  class="btn btn-primary btn-lg">שלח</button>
+
+		</form> 
+		
+		</p-dialog> 
+
+	
+	   <br><br><br><br><br><br>
+	   <br><br><br><br><br><br>
+
+ <i class="fa fa-remove"></i>
+<!-- </a> -->
+<div class="row text-center">
+	<div class="col-md-4">
+	  <div class="btn-group">
+		<div
+		  class="btn btn-primary"
+		  mwlCalendarPreviousView
+		  [view]="view"
+		  [(viewDate)]="viewDate"
+		  (viewDateChange)="closeOpenMonthViewDay()"
+		>
+		  הקודם
+		</div>
+		<div
+		  class="btn btn-outline-secondary"
+		  mwlCalendarToday
+		  [(viewDate)]="viewDate"
+		>
+		  היום
+		</div>
+		<div
+		  class="btn btn-primary"
+		  mwlCalendarNextView
+		  [view]="view"
+		  [(viewDate)]="viewDate"
+		  (viewDateChange)="closeOpenMonthViewDay()"
+		>
+		  הבא
+		</div>
+	  </div>
+	</div>
+	<div class="col-md-4">
+	  <h3>{{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}</h3>
+
+	</div>
+	<div class="col-md-4">
+	  <div class="btn-group">
+		<div
+		  class="btn btn-primary"
+		  (click)="setView(CalendarView.Month)"
+		  [class.active]="view === CalendarView.Month"
+		>
+		חודש
+		</div>
+		<div
+		  class="btn btn-primary"
+		  (click)="setView(CalendarView.Week)"
+		  [class.active]="view === CalendarView.Week"
+		>
+		  שבוע
+		</div>
+		<div
+		  class="btn btn-primary"
+		  (click)="setView(CalendarView.Day)"
+		  [class.active]="view === CalendarView.Day"
+		>
+		  יום
+		</div>
+	  </div>
+	</div>
+  </div>
+  <br />
+  <div [ngSwitch]="view">
+	<mwl-calendar-month-view
+	  *ngSwitchCase="CalendarView.Month"
+	  [viewDate]="viewDate"
+	  [events]="events"
+	  [refresh]="refresh"
+	  [activeDayIsOpen]="activeDayIsOpen"	  
+	  (dayClicked)="dayClicked($event.day)"
+	  (eventClicked)="handleEvent('Clicked', $event.event)"
+	  (eventTimesChanged)="eventTimesChanged($event)"
+	>
+	</mwl-calendar-month-view>
+	<mwl-calendar-week-view
+	  *ngSwitchCase="CalendarView.Week"
+	  [viewDate]="viewDate"
+	  [events]="events"
+	  [refresh]="refresh"
+	  (eventClicked)="handleEvent('Clicked', $event.event)"
+	  (eventTimesChanged)="eventTimesChanged($event)"
+	>
+	</mwl-calendar-week-view>
+	<mwl-calendar-day-view
+	  *ngSwitchCase="CalendarView.Day"
+	  [viewDate]="viewDate"
+	  [events]="events"
+	  [refresh]="refresh"
+	  (eventClicked)="handleEvent('Clicked', $event.event)"
+      (eventTimesChanged)="eventTimesChanged($event)"
+	>
+	</mwl-calendar-day-view>
+  </div>
+  
+  
+  <br /><br /><br />
+  
+
+  
+  
+  
+  <p-dialog  class="b" position="center" [(visible)]="display2"  >
+	<h1 >נקבעה פגישה לתאריך: {{meetOfDay.date|date:'dd/MM/yy'}}</h1>
+	<h1 >קובע הפגישה :  {{meetOfDay.name}}</h1>
+    <h1 >מטרת הפגישה: {{meetOfDay.purpose}}</h1>
+	<h1 >מיקום הפגישה: {{meetOfDay.place}}</h1>
+	<h1 >הפגישה תתקים בשעה:  {{meetOfDay.time}}</h1>
+
+	<!-- <button  class="btn btn-default btn-lg" type="button"  data-toggle="dropdown"(click)="showParticipations(meetOfDay)">הצג את חברי הקבוצה
+		<span   class="caret"></span>          
+	</button>
+		<ul  *ngFor="let item of arrMemberGroup"  >
+		  <li *ngIf="degelP" class="font" >{{item.name}}   -->
+			<button  class="button2  btn-lg" type="button"  data-toggle="dropdown"(click)="showMemberParticipation()">הצג את חברי הפגישה
+				<span   class="caret"></span>          
+			</button>
+				<ul  *ngFor="let item of arrMemberParticipation"  >
+				  <p  *ngIf="!degelS" class="font" >{{item.name}}   </p>
+				
+			</ul>
+			<br>
+			<div *ngIf="meetOfDay.initiastor_id!=this.personService.curentUser.person_id">
+		<label class="b">לאישור השתתפות
+   <p-checkbox   value="1"  [(ngModel)]="selectedValues" ></p-checkbox>
+</label></div>
+<label class="b">תזכורת
+	<p-checkbox class="b"  value="1"  [(ngModel)]="reminder"></p-checkbox>
+	</label>
+	
+	<button  class="btn btn-primary  btn-lg" (click)="addParticipation(meetOfDay)">
+		שלח
+	</button>
+	<button *ngIf="meetOfDay.initiastor_id==this.personService.curentUser.person_id" class="btn btn-danger btn-lg" (click)="delete(meetOfDay)">
+		<span class="glyphicon glyphicon-trash"></span> מחק  
+	</button>
+	<button *ngIf="meetOfDay.initiastor_id==this.personService.curentUser.person_id" class="btn btn-info btn-lg" (click)="update()">
+		עדכון
+	</button>
+
+  <ng-template #modalContent let-close="close">
+	<div class="modal-header">
+	  <h1 class="modal-title">Event action occurred</h1>
+	  <button type="button" class="close" (click)="close()">
+		<span aria-hidden="true">&times;</span>
+	  </button>
+	</div>
+	<div class="modal-body">
+	  <div>
+		Action:
+		<pre>{{ modalData?.action }}</pre>
+	  </div>
+	  <div>
+		Event:
+		<pre>{{ modalData?.event | json }}</pre>
+	  </div>
+	</div>
+	<div class="modal-footer">
+	  <button type="button" class="btn btn-outline-secondary" (click)="close()">
+		OK
+	  </button>
+	</div>
+	
+  </ng-template>
+  <div *ngIf="ishur"  class="alert">
+	<strong>  השתתפותך אושרה  !  </strong> 
+	<span class="glyphicon glyphicon-alert"></span> 
+	<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+ </div>
+
+ <p-dialog   position="top" [(visible)]="display4">
+	<form >
+		  
+		  <label class="b"for="usr"> תאריך פגישה </label>
+		  <input class="f"  style="height: 50px" type="text" id="usr" name="name"  pInputText placeholder="{{meetOfDay.date|date:'dd:MM'}}">
+	  <br><br>
+	   
+		  <label class="b" for="number"> מטרת הפגישה</label>
+		  <input  class="f" style="height: 50px" type="text"   pInputText placeholder="{{meetOfDay.purpose}}">
+	  <br><br>
+		<label class="b" for="email"> מקום הפגישה</label>
+		<input class="f" style="height: 50px" type="text"   id="email" name="email" pInputText placeholder="{{meetOfDay.place}}">
+	  <br><br>
+  
+		<label class="b" for="pwd">שעת הפגישה</label>
+		<input class="f"  type="text"  id="date" name="password"  pInputText placeholder="{{meetOfDay.time}}">
+	  <br><br>
+  
+	  <button type="submit" class="btn btn-primary btn-lg"  >שלח</button>
+	
+	</form> 
+	 
+	</p-dialog>
+  
+  

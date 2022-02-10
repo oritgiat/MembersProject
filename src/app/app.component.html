@@ -1,0 +1,37 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<nav class="navbar navbar-inverse" >
+    <div class="container-fluid" >
+      <div class="navbar-header" >
+        <div id='navbar' >
+          <ul class="nav navbar-nav navbar-left">
+            <li><a href="http://localhost:4200/first-nav/Home"><span class="glyphicon glyphicon-log-out"></span> התנתקות</a></li>
+          </ul>
+
+</div>
+      </div>
+      <ul class="nav navbar-nav navbar-right"> 
+        <li><a [routerLink]="['first-nav/about']"><span class="glyphicon glyphicon-globe"></span> אודות</a></li>
+        <li><a [routerLink]="['first-nav/registration']"><span class="glyphicon glyphicon-edit"></span> הרשמה</a></li>
+
+        <li><a [routerLink]="['first-nav/identification']"><span class="glyphicon glyphicon-log-in"></span> כניסה</a></li>
+        <li><a [routerLink]="['first-nav/new-group']"><span class="glyphicon glyphicon-plus"></span> צור קבוצה חדשה</a></li>
+        <li><a [routerLink]="['first-nav/private-area']"><span class="glyphicon glyphicon-user"></span>
+           אזור אישי</a></li>
+        <li><a  class="navbar-brand" [routerLink]="['/first-nav/Home']" ><span class="glyphicon glyphicon-home"></span> דף הבית</a></li>
+        
+      </ul>
+    </div>
+</nav> 
+<!-- <img src="../assets/img/pic1..jpg"> -->
+<br>
+<!-- <img *ngIf=" personService.curentUser.name" src="http://localhost:52491/img/111.jpg" alt="Avatar" class="avatar" >
+
+<a class="b" > {{personService.curentUser.name}}    </a>
+<p class="b1">{{personService.status}}</p> -->
+<router-outlet></router-outlet>
+

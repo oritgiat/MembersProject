@@ -1,0 +1,46 @@
+<h1 class="user" >הרשמה</h1>
+
+<div class="well " >
+  <form   #form="ngForm">
+
+    <div  class="form-group">
+      <br>
+      <label class="b"  for="usr"> שם משתמש</label>
+      <br>
+       <input class="f"  style="height: 50px" type="text" id="usr" name="name" [(ngModel)]="personModule.name"  pInputText placeholder="הכנס שם פרטי">
+   
+     </div>
+  <div class="form-group">
+    <br>
+    <label class="b" for="number" >תעודת זהות </label>
+    <br>
+    <input class="f" style="height: 50px" type="text"  id="number" name="id" [(ngModel)]="personModule.person_id" pInputText placeholder="הכנס תעודת זהות">
+  </div>
+  
+  <div class="form-group">
+    <br>
+    <label class="b" for="email"> כתובת מייל</label>
+
+    <br>
+    <input class="f" style="height: 50px" type="email"  id="email" name="email" [(ngModel)]="personModule.email" pInputText placeholder="הכנס כתובת מייל">
+
+
+  </div>
+  <div class="form-group">
+    <br>
+    <label class="b" for="pwd">סיסמא:</label>
+    <br>
+    <input class="f" style="height: 50px" type="password"   id="pwd" name="password" [(ngModel)]="personModule.password">
+  </div>
+  <br><br>
+  <button  type="submit"class="btn"  class="btn btn-block"  (click)="add()" [routerLink]=" ['/first-nav/Home']">שלח</button>
+
+</form> 
+</div>
+<div *ngIf="baruch"  class="alert">
+  <span class="glyphicon glyphicon-ok"></span> 
+
+  <strong>    ברוך הבא ל {{personModule.name}}</strong> 
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+ </div>
+

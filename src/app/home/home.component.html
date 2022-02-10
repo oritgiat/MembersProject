@@ -1,0 +1,53 @@
+
+ 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+  
+  <body>
+    <img *ngIf=" personService.curentUser.name" src="http://localhost:52491/img/111.jpg" alt="Avatar" class="avatar" >
+
+<a class="b4" > {{personService.curentUser.name}}    </a>
+<a class="b5">{{personService.status}}</a>
+  <h3 style="color:darkred(89, 241, 29)" class="b">קבוצות חברתיות</h3>
+  <h4 style="color:darkred(89, 241, 29)" class="b2">כאן תוכל להשתתף בקבוצות קימות או לפתוח קבוצה חדשה</h4>
+
+  <br><br><br><br><br><br><br><br>
+  <div *ngIf="bakash"  class="alert">
+		<strong>   נשלחה בקשה לענין הצטרפותך!    </strong> 
+		<span class="glyphicon glyphicon-ok"></span> 
+		<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+	 </div>
+   <div *ngIf="rashom"  class="alert">
+		<strong>  אתה רשום בקבוצה!  </strong> 
+		<span class="glyphicon glyphicon-alert"></span> 
+		<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+	 </div>
+   <div *ngIf="nirshmta"  class="alert">
+		<strong>  נרשמת בהצלחה!  </strong> 
+		<span class="glyphicon glyphicon-alert"></span> 
+		<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+	 </div>
+  <div  class="w3-main w3-content w3-padding" >
+   <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="col-md-3" *ngFor="let item of arrGroup" >
+      <div   class="thumbnail"  [routerLink]="['/first-nav/group',item.Group_id]"   >
+     <img   src="http://localhost:52491/img/{{item.image}}" width="500rpx" height="380px"    [ngClass]="{disabled:item.joining==2,abled:item.joining==3,abled:item.joining==1} "   >
+     <p class="p">{{item.group_description}} </p>
+      <button  class="btn"  (click)="addMember(item.Group_id)" *ngIf="item.joining!=2" >להצטרפות</button>
+
+      <button  class="btn" class="btn btn-block" (click)="addMember(item.Group_id)" *ngIf="item.joining==2" disabled>הצטרפות סגורה</button>
+      <!-- <p-toast position="top-left"></p-toast> -->
+
+      </div>
+    </div>
+    </div>
+  </div>
+
+
+  

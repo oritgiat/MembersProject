@@ -1,0 +1,50 @@
+
+<div class="well " >
+  <h1 class="c">פתיחת קבוצה חדשה</h1>
+  <form   #form="ngForm">
+  
+  <div   class="p-field">
+      <label class="b" for="usr">תאור קבוצה </label>
+      
+<br>
+      <input  class="b2"  style="height: 50px" type="text"  id="usr" name="description" [(ngModel)]="groupModule.group_description">
+      <br>
+  </div>
+  <div >
+    <label class="b" for="number">תעודת זהות מנהל</label>
+    <br>
+    <input class="b2"  style="height: 50px" type="text"   id="number" name="id" [(ngModel)]="groupModule.manager_id">
+    <br>
+  </div> 
+
+  
+    <label class="b" for="joining">הצטרפות פתוחה</label>
+    <br>
+    <select class="b1"  id="user" name="joining" [(ngModel)]="groupModule.joining">
+      <option value="1">כן</option>
+      <option value="2">לא</option>
+      <option value="3">מחכה לאישור</option>
+    </select>
+  
+    <form action=" " method="post" enctype="multipart/form-data">
+    
+    <br>
+      <label class="b" for="Image">
+       הכנס תמונה</label>
+      <!-- <input class="w3-input"  type="file" name="image"  (change)="mychange()"> -->
+      <input class="b1" type="file" name="pic" id="file-input" class="form-control" #Image [ngModel]="groupModule.image" (change)="handleFileInput($event.target.files)"placeholder="בחר תמונה" />
+      <br >
+      <br>
+    
+    
+      <button class="btn" type="submit" class="btn btn-block"  (click)="addGroup()"  >שלח</button>
+      <!-- [routerLink]= "['/first-nav/private-area']" -->
+</form>
+
+<div *ngIf="chadasha"  class="alert ">
+  <span class="glyphicon glyphicon-ok"></span> 
+
+  <strong>     נפתחה קבוצה חדשה! </strong> 
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+</div>
+

@@ -1,0 +1,102 @@
+<p-sidebar [(visible)]="display2" position="right" [style]="{width:'20em',height:'100em'}">
+	<br><br><br>
+	<div  class="btn-group-vertical">
+	
+	<button    class="btn   btn-block" (click)="meeting()">
+		ללוח הפגישות
+  </button>
+	<br>
+
+		<button  *ngIf="personService.managerAproval" class="btn btn-block"  type="button"  (click)="aprovalses()">מחכים לאישור</button>
+		<br *ngIf="personService.managerAproval">
+
+		
+    <button class="btn btn-default btn-block"   (click)="showDialog()">עדכון פרטים אישיים</button>
+<br>
+
+
+</div>
+</p-sidebar>
+
+<i   class="pi pi-bars"  style="font-size: 3rem" (click)="icon_display()"  ></i>
+<br>
+<img *ngIf=" personService.curentUser.name" src="http://localhost:52491/img/111.jpg" alt="Avatar" class="avatar" >
+
+<a class="b4" > {{personService.curentUser.name}}    </a>
+<a class="b5">{{personService.status}}</a>
+<br><br><br><br><br>
+
+
+<p-dialog   position="top" [(visible)]="display">
+  <form >
+        
+        <!-- <label for="usr">שם פרטי </label> -->
+        <input class="f"  style="height: 50px" type="text" id="usr" name="name"  pInputText placeholder="{{this.personService.curentUser.name}}">
+    <br><br>
+     
+        <!-- <label for="number">תעודת זהות</label> -->
+        <input  class="f" style="height: 50px" type="text"   pInputText placeholder="{{this.personService.curentUser.person_id}}">
+    <br><br>
+      <!-- <label for="email">כתובת מייל</label> -->
+      <input class="f" style="height: 50px"type="email"   id="email" name="email" pInputText placeholder="{{this.personService.curentUser.email}}">
+    <br><br>
+
+      <!-- <label for="pwd">סיסמא</label> -->
+      <input class="f"  type="number"  id="pwd" name="password"  pInputText placeholder="{{this.personService.curentUser.password}}">
+    <br><br>
+
+    <button type="submit" class="btn btn-primary btn-lg"  >שלח</button>
+  
+  </form> 
+   
+  </p-dialog>
+
+
+<div class="row">
+  <div *ngIf="isManagerStatus" >
+    <h1 *ngIf="isManager" class="b"> קבוצות שאני מנהל בהן</h1>
+  </div>
+  
+  <div *ngIf="listManager">
+   <div class ="t" >
+<div  class="w3-main w3-content w3-padding" style="margin-top:50px;margin-left:50px ;margin-right: 50px;">
+      <div class="w3-row-padding w3-padding-16 w3-center" >
+       <div class="col-md-3" *ngFor="let item of listManager">
+         <div class="thumbnail"  [routerLink]="['/first-nav/group',item.Group_id]" >
+<img  src="http://localhost:52491/img/{{item.image}}"  width="500rpx" height="380px"  >
+<div class="x"><p class="p">{{item.group_description}} </p></div>
+</div>
+  </div></div> </div> </div></div></div>
+  <div *ngIf="isManagerStatus" >
+
+    <div *ngIf="isMember" class="container">  </div>
+        </div>
+ <div *ngIf="listMember"  >
+  <div *ngIf="isMemberStatus" >
+  <div *ngIf="isMember"  class ="b" ><h1> קבוצות שאני חבר בהן</h1></div>
+    <div class="w3-main w3-content w3-padding" style="margin-top:50px;margin-left:50px ;margin-right: 50px;">
+      <div class="w3-row-padding w3-padding-16 w3-center">
+       <div class="col-md-3"  *ngFor="let item of listMember">
+         <div class="thumbnail" [routerLink]="['/first-nav/group',item.Group_id]" >
+    <img   src="http://localhost:52491/img/{{item.image}}" style="width:100%" height="150px">
+    <p class="p">{{item.group_description}} </p>
+  </div>
+  </div>
+</div></div> 
+</div> </div> 
+&nbsp;
+
+<div *ngIf="personService.yonit">
+<div  *ngIf="!wait" class="container">  </div>
+        
+ <div *ngIf="listWait"  >
+  <div  *ngIf="!wait" class ="b" ><h1> קבוצות שאני מחכה לאישור</h1></div>
+    <div class="w3-main w3-content w3-padding" style="margin-top:50px;margin-left:50px ;margin-right: 50px;">
+      <div class="w3-row-padding w3-padding-16 w3-center">
+       <div class="col-md-3"  *ngFor="let item of listWait">
+         <div class="thumbnail"  >
+    <img   src="http://localhost:52491/img/{{item.image}}" style="width:100%" height="150px">
+    <p class="p">{{item.group_description}} </p>
+  </div>
+  </div>
+</div></div> </div> </div> 

@@ -1,0 +1,23 @@
+.navbar{
+    background-color: rgb(77, 2, 33);
+    font-size: 25px;
+    
+}
+.navbar-brand{
+    color: #fffafb;
+
+    font-size: 25px;
+}
+.avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+  }
+  .b{
+      font-size: 23Px;
+  }
+  .b1{
+    font-size: 20Px;
+    top:20%;
+    
+}

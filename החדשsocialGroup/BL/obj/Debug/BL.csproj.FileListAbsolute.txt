@@ -1,0 +1,32 @@
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\BL\bin\Debug\BL.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\BL\bin\Debug\BL.pdb
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\BL\obj\Debug\BL.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\BL\obj\Debug\BL.pdb
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\BL\bin\Debug\DAL.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\BL\bin\Debug\EntityFramework.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\BL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\BL\bin\Debug\DAL.pdb
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\BL\bin\Debug\DAL.dll.config
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\BL\bin\Debug\EntityFramework.xml
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\BL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\BL\obj\Debug\BL.csprojAssemblyReference.cache
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\BL\obj\Debug\BL.csproj.CopyComplete
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\BL\bin\Debug\Entities.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\BL\bin\Debug\Entities.pdb
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\BL\bin\Debug\BL.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\BL\bin\Debug\BL.pdb
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\BL\bin\Debug\DAL.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\BL\bin\Debug\Entities.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\BL\bin\Debug\EntityFramework.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\BL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\BL\bin\Debug\DAL.pdb
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\BL\bin\Debug\DAL.dll.config
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\BL\bin\Debug\Entities.pdb
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\BL\bin\Debug\EntityFramework.xml
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\BL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\BL\obj\Debug\BL.csprojAssemblyReference.cache
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\BL\obj\Debug\BL.csproj.CopyComplete
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\BL\obj\Debug\BL.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\BL\obj\Debug\BL.pdb

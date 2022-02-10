@@ -1,0 +1,150 @@
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\obj\Debug\server.csprojAssemblyReference.cache
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\obj\Debug\server.csproj.CoreCompileInputs.cache
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\server.dll.config
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\server.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\server.pdb
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\csc.exe
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\csc.exe.config
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\csc.rsp
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\csi.exe
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\csi.exe.config
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\csi.rsp
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\System.AppContext.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\System.Console.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\System.IO.Compression.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\System.IO.Pipes.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\System.Security.Claims.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\System.ValueTuple.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\System.Xml.XPath.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\vbc.exe
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\vbc.exe.config
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\vbc.rsp
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\VBCSCompiler.exe
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\BL.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\DAL.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\Entities.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\EntityFramework.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\EntityFramework.SqlServer.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\Newtonsoft.Json.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\System.Net.Http.Formatting.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\System.Web.Http.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\System.Web.Http.WebHost.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\BL.pdb
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\DAL.pdb
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\DAL.dll.config
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\Entities.pdb
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\EntityFramework.xml
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\EntityFramework.SqlServer.xml
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\Newtonsoft.Json.xml
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\System.Net.Http.Formatting.xml
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\System.Web.Http.xml
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\System.Web.Http.WebHost.xml
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\obj\Debug\server.csproj.CopyComplete
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\obj\Debug\server.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\server\obj\Debug\server.pdb
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\server.dll.config
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\server.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\server.pdb
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\csc.exe
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\csc.exe.config
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\csc.rsp
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\csi.exe
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\csi.exe.config
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\csi.rsp
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\System.AppContext.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\System.Console.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\System.IO.Compression.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\System.IO.Pipes.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\System.Security.Claims.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\System.ValueTuple.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\System.Xml.XPath.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\vbc.exe
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\vbc.exe.config
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\vbc.rsp
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\VBCSCompiler.exe
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\BL.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\DAL.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\Entities.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\EntityFramework.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\EntityFramework.SqlServer.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\Newtonsoft.Json.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\System.Net.Http.Formatting.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\System.Web.Http.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\System.Web.Http.WebHost.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\BL.pdb
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\DAL.pdb
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\DAL.dll.config
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\Entities.pdb
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\EntityFramework.xml
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\EntityFramework.SqlServer.xml
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\Newtonsoft.Json.xml
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\System.Net.Http.Formatting.xml
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\System.Web.Http.xml
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\System.Web.Http.WebHost.xml
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\obj\Debug\server.csproj.CoreCompileInputs.cache
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\obj\Debug\server.csproj.CopyComplete
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\obj\Debug\server.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\obj\Debug\server.pdb
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\server\obj\Debug\server.csprojAssemblyReference.cache

@@ -1,0 +1,24 @@
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\Entities\bin\Debug\Entities.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\Entities\bin\Debug\Entities.pdb
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\Entities\obj\Debug\Entities.csprojAssemblyReference.cache
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\Entities\obj\Debug\Entities.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\Entities\obj\Debug\Entities.pdb
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\Entities\bin\Debug\DAL.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\Entities\bin\Debug\EntityFramework.dll
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\Entities\bin\Debug\DAL.pdb
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\Entities\bin\Debug\DAL.dll.config
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\Entities\bin\Debug\EntityFramework.xml
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\Entities\obj\Debug\Entities.csproj.CopyComplete
+C:\Users\benti\Desktop\לימודים\פרויקט גמר\socialGroup\Entities\obj\Debug\Entities.csproj.CoreCompileInputs.cache
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\Entities\bin\Debug\Entities.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\Entities\bin\Debug\Entities.pdb
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\Entities\bin\Debug\DAL.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\Entities\bin\Debug\EntityFramework.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\Entities\bin\Debug\DAL.pdb
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\Entities\bin\Debug\DAL.dll.config
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\Entities\bin\Debug\EntityFramework.xml
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\Entities\obj\Debug\Entities.csproj.CoreCompileInputs.cache
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\Entities\obj\Debug\Entities.csproj.CopyComplete
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\Entities\obj\Debug\Entities.dll
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\Entities\obj\Debug\Entities.pdb
+C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\Entities\obj\Debug\Entities.csprojAssemblyReference.cache

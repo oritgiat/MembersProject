@@ -1,0 +1,3 @@
+﻿1>------ Build started: Project: DAL, Configuration: Debug Any CPU ------
+1>  DAL -> C:\Users\dell latitude\Desktop\the project\החדשsocialGroup\DAL\bin\Debug\DAL.dll
+========== Build: 1 succeeded, 0 failed, 3 up-to-date, 0 skipped ==========

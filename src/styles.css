@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+.my-style {
+    color: red
+}
+body{
+  background-image: url("./assets/img/pic10.jpg.jpg");
+  background-repeat: no-repeat;
+  background-color: rgb(194, 209, 209);
+  background-size: 120%;
+    direction: rtl;
+}
+h3 {
+    margin: 0 0 10px;
+  }
+  
+  pre {
+    background-color: #f5f5f5;
+    padding: 15px;
+  }

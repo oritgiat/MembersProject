@@ -1,0 +1,18 @@
+h3 {
+    margin: 0 0 10px;
+  }
+  
+  pre {
+    background-color: #f5f5f5;
+    padding: 15px;
+  }
+
+  label {
+    display: block;
+    font: 10rem , sans-serif;
+}
+
+input,
+label {
+    margin: .4rem 0;
+}

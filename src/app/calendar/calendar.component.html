@@ -1,0 +1,232 @@
+
+<a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+	<label for="start">בחר תאריך</label>
+
+<input type="date" id="start" name="trip-start"
+       value="2020-11-04"
+	   min="2020-01-01" max="2020-12-31">
+
+	   <label for="appt">בחר</label>
+
+<input type="time" id="appt" name="appt"
+       min="07:00" max="00:00" required>
+
+
+
+	   <label for="start">בחר מקום</label>
+	   <input  type="text" class="form-control" style="width:min-content"ngn name="messege" >
+	   <label for="start"> מטרת הפגישה</label>
+	   <input  type="text" class="form-control" style="width:min-content"ngn name="messege" >
+	   <button  (click)="add()" class="btn btn-default">שלח</button>
+
+	   <br><br><br><br><br><br>
+	   <br><br><br><br><br><br>
+	   <br><br><br><br><br><br>
+
+
+
+    <i class="fa fa-remove"></i>
+</a>
+<div class="row text-center">
+	<div class="col-md-4">
+	  <div class="btn-group">
+		<div
+		  class="btn btn-primary"
+		  mwlCalendarPreviousView
+		  [view]="view"
+		  [(viewDate)]="viewDate"
+		  (viewDateChange)="closeOpenMonthViewDay()"
+		>
+		  הקודם
+		</div>
+		<div
+		  class="btn btn-outline-secondary"
+		  mwlCalendarToday
+		  [(viewDate)]="viewDate"
+		>
+		  היום
+		</div>
+		<div
+		  class="btn btn-primary"
+		  mwlCalendarNextView
+		  [view]="view"
+		  [(viewDate)]="viewDate"
+		  (viewDateChange)="closeOpenMonthViewDay()"
+		>
+		  הבא
+		</div>
+	  </div>
+	</div>
+	<div class="col-md-4">
+	  <h3>{{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}</h3>
+	</div>
+	<div class="col-md-4">
+	  <div class="btn-group">
+		<div
+		  class="btn btn-primary"
+		  (click)="setView(CalendarView.Month)"
+		  [class.active]="view === CalendarView.Month"
+		>
+		חודש
+		</div>
+		<div
+		  class="btn btn-primary"
+		  (click)="setView(CalendarView.Week)"
+		  [class.active]="view === CalendarView.Week"
+		>
+		  שבוע
+		</div>
+		<div
+		  class="btn btn-primary"
+		  (click)="setView(CalendarView.Day)"
+		  [class.active]="view === CalendarView.Day"
+		>
+		  יום
+		</div>
+	  </div>
+	</div>
+  </div>
+  <br />
+  <div [ngSwitch]="view">
+	<mwl-calendar-month-view
+	  *ngSwitchCase="CalendarView.Month"
+	  [viewDate]="viewDate"
+	  [events]="events"
+	  [refresh]="refresh"
+	  [activeDayIsOpen]="activeDayIsOpen"
+	  (dayClicked)="dayClicked($event.day)"
+	  (eventClicked)="handleEvent('Clicked', $event.event)"
+	  (eventTimesChanged)="eventTimesChanged($event)"
+	>
+	</mwl-calendar-month-view>
+	<mwl-calendar-week-view
+	  *ngSwitchCase="CalendarView.Week"
+	  [viewDate]="viewDate"
+	  [events]="events"
+	  [refresh]="refresh"
+	  (eventClicked)="handleEvent('Clicked', $event.event)"
+	  (eventTimesChanged)="eventTimesChanged($event)"
+	>
+	</mwl-calendar-week-view>
+	<mwl-calendar-day-view
+	  *ngSwitchCase="CalendarView.Day"
+	  [viewDate]="viewDate"
+	  [events]="events"
+	  [refresh]="refresh"
+	  (eventClicked)="handleEvent('Clicked', $event.event)"
+	  (eventTimesChanged)="eventTimesChanged($event)"
+	>
+	</mwl-calendar-day-view>
+  </div>
+  
+  
+  <br /><br /><br />
+  
+  <h3>
+	ערוך אירועים
+	<button class="btn btn-primary float-right" (click)="addEvent()">
+	  הוסף חדש 
+	</button>
+	<div class="clearfix"></div>
+  </h3>
+  
+  <div class="table-responsive">
+	<table class="table table-bordered">
+	  <thead>
+		<tr>
+		  <th>כותרת</th>
+		  <th> צבע ראשי</th>
+		  <th> צבע משני</th>
+		  <th> תאריך התחלה</th>
+		  <th> תאריך סיום</th>
+		  <th>הסר</th>
+		</tr>
+	  </thead>
+  
+	  <tbody>
+		<tr *ngFor="let event of events">
+		  <td>
+			<input
+			  type="text"
+			  class="form-control"
+			  [(ngModel)]="event.title"
+			  (keyup)="refresh.next()"
+			/>
+		  </td>
+		  <td>
+			<input
+			  type="color"
+			  [(ngModel)]="event.color.primary"
+			  (change)="refresh.next()"
+			/>
+		  </td>
+		  <td>
+			<input
+			  type="color"
+			  [(ngModel)]="event.color.secondary"
+			  (change)="refresh.next()"
+			/>
+		  </td>
+		  <td>
+			<input
+			  class="form-control"
+			  type="date"
+			  mwlFlatpickr
+			  [(ngModel)]="event.start"
+			  (ngModelChange)="refresh.next()"
+			  [altInput]="true"
+			  [convertModelValue]="true"
+			  [enableTime]="true"
+			  dateFormat="Y-m-dTH:i"
+			  altFormat="F j, Y H:i"
+			  placeholder="Not set"
+			/>
+		  </td>
+		  <td>
+			<input
+			  class="form-control"
+			  type="date"
+			  mwlFlatpickr
+			  [(ngModel)]="event.end"
+			  (ngModelChange)="refresh.next()"
+			  [altInput]="true"
+			  [convertModelValue]="true"
+			  [enableTime]="true"
+			  dateFormat="Y-m-dTH:i"
+			  altFormat="F j, Y H:i"
+			  placeholder="Not set"
+			/>
+		  </td>
+		  <td>
+			<button class="btn btn-danger" (click)="deleteEvent(event)">
+			  מחק
+			</button>
+		  </td>
+		</tr>
+	  </tbody>
+	</table>
+  </div>
+  
+  <ng-template #modalContent let-close="close">
+	<div class="modal-header">
+	  <h5 class="modal-title">Event action occurred</h5>
+	  <button type="button" class="close" (click)="close()">
+		<span aria-hidden="true">&times;</span>
+	  </button>
+	</div>
+	<div class="modal-body">
+	  <div>
+		Action:
+		<pre>{{ modalData?.action }}</pre>
+	  </div>
+	  <div>
+		Event:
+		<pre>{{ modalData?.event | json }}</pre>
+	  </div>
+	</div>
+	<div class="modal-footer">
+	  <button type="button" class="btn btn-outline-secondary" (click)="close()">
+		OK
+	  </button>
+	</div>
+  </ng-template>

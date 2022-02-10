@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="groupDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="correspodence_tbl">
+    <Key>
+      <PropertyRef Name="correspodence_id" />
+    </Key>
+    <Property Name="correspodence_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="group_id" Type="int" Nullable="false" />
+    <Property Name="date" Type="datetime" Nullable="false" />
+    <Property Name="sending_id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="contents" Type="varchar" MaxLength="300" />
+    <Property Name="addressee" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="group_tbl">
+    <Key>
+      <PropertyRef Name="group_id" />
+    </Key>
+    <Property Name="group_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="group_description" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="manager_id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="joining" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="image" Type="varchar(max)" />
+    <Property Name="details" Type="varchar" MaxLength="3000" />
+  </EntityType>
+  <EntityType Name="meeting_tbl">
+    <Key>
+      <PropertyRef Name="meeting_id" />
+    </Key>
+    <Property Name="meeting_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="group_id" Type="int" Nullable="false" />
+    <Property Name="date" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="purpose" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="initiastor_id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="place" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="done" Type="varchar" MaxLength="50" />
+    <Property Name="summary" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="member_group_tbl">
+    <Key>
+      <PropertyRef Name="member_group_id" />
+    </Key>
+    <Property Name="member_group_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="person_id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="group_id" Type="int" Nullable="false" />
+    <Property Name="joining_date" Type="datetime" />
+    <Property Name="member_status" Type="int" />
+  </EntityType>
+  <EntityType Name="participation_tbl">
+    <Key>
+      <PropertyRef Name="participation_id" />
+    </Key>
+    <Property Name="participation_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="member_group_id" Type="int" />
+    <Property Name="aproval" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="reminder" Type="varchar" MaxLength="50" />
+    <Property Name="timing_reminder" Type="varchar" MaxLength="50" />
+    <Property Name="actually_participation" Type="varchar" MaxLength="50" />
+    <Property Name="person_id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="meeting_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="person_tbl">
+    <Key>
+      <PropertyRef Name="person_id" />
+    </Key>
+    <Property Name="person_id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+    <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="int" Nullable="false" />
+    <Property Name="person_status" Type="int" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_correspodence_tbl_group_tbl">
+    <End Role="group_tbl" Type="Self.group_tbl" Multiplicity="1" />
+    <End Role="correspodence_tbl" Type="Self.correspodence_tbl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="group_tbl">
+        <PropertyRef Name="group_id" />
+      </Principal>
+      <Dependent Role="correspodence_tbl">
+        <PropertyRef Name="group_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_correspodence_tbl_person_tbl">
+    <End Role="person_tbl" Type="Self.person_tbl" Multiplicity="1" />
+    <End Role="correspodence_tbl" Type="Self.correspodence_tbl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="person_tbl">
+        <PropertyRef Name="person_id" />
+      </Principal>
+      <Dependent Role="correspodence_tbl">
+        <PropertyRef Name="sending_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_group_tbl_person_tbl">
+    <End Role="person_tbl" Type="Self.person_tbl" Multiplicity="1" />
+    <End Role="group_tbl" Type="Self.group_tbl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="person_tbl">
+        <PropertyRef Name="person_id" />
+      </Principal>
+      <Dependent Role="group_tbl">
+        <PropertyRef Name="manager_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_meeting_tbl_group_tbl1">
+    <End Role="group_tbl" Type="Self.group_tbl" Multiplicity="1" />
+    <End Role="meeting_tbl" Type="Self.meeting_tbl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="group_tbl">
+        <PropertyRef Name="group_id" />
+      </Principal>
+      <Dependent Role="meeting_tbl">
+        <PropertyRef Name="group_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_meeting_tbl_person_tbl">
+    <End Role="person_tbl" Type="Self.person_tbl" Multiplicity="1" />
+    <End Role="meeting_tbl" Type="Self.meeting_tbl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="person_tbl">
+        <PropertyRef Name="person_id" />
+      </Principal>
+      <Dependent Role="meeting_tbl">
+        <PropertyRef Name="initiastor_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_member_group_tbl_group_tbl">
+    <End Role="group_tbl" Type="Self.group_tbl" Multiplicity="1" />
+    <End Role="member_group_tbl" Type="Self.member_group_tbl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="group_tbl">
+        <PropertyRef Name="group_id" />
+      </Principal>
+      <Dependent Role="member_group_tbl">
+        <PropertyRef Name="group_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_member_group_tbl_person_tbl1">
+    <End Role="person_tbl" Type="Self.person_tbl" Multiplicity="1" />
+    <End Role="member_group_tbl" Type="Self.member_group_tbl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="person_tbl">
+        <PropertyRef Name="person_id" />
+      </Principal>
+      <Dependent Role="member_group_tbl">
+        <PropertyRef Name="person_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_participation_tbl_meeting_tbl">
+    <End Role="meeting_tbl" Type="Self.meeting_tbl" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="participation_tbl" Type="Self.participation_tbl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="meeting_tbl">
+        <PropertyRef Name="meeting_id" />
+      </Principal>
+      <Dependent Role="participation_tbl">
+        <PropertyRef Name="meeting_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_participation_tbl_person_tbl">
+    <End Role="person_tbl" Type="Self.person_tbl" Multiplicity="1" />
+    <End Role="participation_tbl" Type="Self.participation_tbl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="person_tbl">
+        <PropertyRef Name="person_id" />
+      </Principal>
+      <Dependent Role="participation_tbl">
+        <PropertyRef Name="person_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="groupDBModelStoreContainer">
+    <EntitySet Name="correspodence_tbl" EntityType="Self.correspodence_tbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="group_tbl" EntityType="Self.group_tbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="meeting_tbl" EntityType="Self.meeting_tbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="member_group_tbl" EntityType="Self.member_group_tbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="participation_tbl" EntityType="Self.participation_tbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="person_tbl" EntityType="Self.person_tbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_correspodence_tbl_group_tbl" Association="Self.FK_correspodence_tbl_group_tbl">
+      <End Role="group_tbl" EntitySet="group_tbl" />
+      <End Role="correspodence_tbl" EntitySet="correspodence_tbl" />
+    </AssociationSet>
+    <AssociationSet Name="FK_correspodence_tbl_person_tbl" Association="Self.FK_correspodence_tbl_person_tbl">
+      <End Role="person_tbl" EntitySet="person_tbl" />
+      <End Role="correspodence_tbl" EntitySet="correspodence_tbl" />
+    </AssociationSet>
+    <AssociationSet Name="FK_group_tbl_person_tbl" Association="Self.FK_group_tbl_person_tbl">
+      <End Role="person_tbl" EntitySet="person_tbl" />
+      <End Role="group_tbl" EntitySet="group_tbl" />
+    </AssociationSet>
+    <AssociationSet Name="FK_meeting_tbl_group_tbl1" Association="Self.FK_meeting_tbl_group_tbl1">
+      <End Role="group_tbl" EntitySet="group_tbl" />
+      <End Role="meeting_tbl" EntitySet="meeting_tbl" />
+    </AssociationSet>
+    <AssociationSet Name="FK_meeting_tbl_person_tbl" Association="Self.FK_meeting_tbl_person_tbl">
+      <End Role="person_tbl" EntitySet="person_tbl" />
+      <End Role="meeting_tbl" EntitySet="meeting_tbl" />
+    </AssociationSet>
+    <AssociationSet Name="FK_member_group_tbl_group_tbl" Association="Self.FK_member_group_tbl_group_tbl">
+      <End Role="group_tbl" EntitySet="group_tbl" />
+      <End Role="member_group_tbl" EntitySet="member_group_tbl" />
+    </AssociationSet>
+    <AssociationSet Name="FK_member_group_tbl_person_tbl1" Association="Self.FK_member_group_tbl_person_tbl1">
+      <End Role="person_tbl" EntitySet="person_tbl" />
+      <End Role="member_group_tbl" EntitySet="member_group_tbl" />
+    </AssociationSet>
+    <AssociationSet Name="FK_participation_tbl_meeting_tbl" Association="Self.FK_participation_tbl_meeting_tbl">
+      <End Role="meeting_tbl" EntitySet="meeting_tbl" />
+      <End Role="participation_tbl" EntitySet="participation_tbl" />
+    </AssociationSet>
+    <AssociationSet Name="FK_participation_tbl_person_tbl" Association="Self.FK_participation_tbl_person_tbl">
+      <End Role="person_tbl" EntitySet="person_tbl" />
+      <End Role="participation_tbl" EntitySet="participation_tbl" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
